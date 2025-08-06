@@ -17,15 +17,8 @@ jobs:
         run: |
           echo "Good"
           echo "Morning"
-        with:
-          node-version: '14'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run build
-        run: npm run build
-
-      - name: Deploy to production
-        run: echo "Deploying to production server..."
-        # 여기에 실제 배포 명령어를 추가하세요.
+       
+      - name: secret 값 설정
+        run:
+          echo ${{secrets.MY_NAME}}
+          echo ${{secrets.MY_HOBBY
